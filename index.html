@@ -4,83 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star matrix</title>
+    <link rel="stylesheet" href="./index.css">
+    <title>Learn Js</title>
 </head>
 
 <body>
-    <h2>Star matrix</h2>
-    <pre id="output"></pre>
-    <pre id="output1"></pre>
-    <pre id="output2"></pre>
-    <pre id="output3"></pre>
-
-    <script>
-        let output = '';
-        for (let col = 1; col <= 20; col++) {
-            let spaces = '';
-            for (let space = 1; space <= 20 - col; space++) {
-                spaces += ' ';
-            }
-
-            let stars = '';
-            for (let row = 1; row <= col; row++) {
-                stars += '* ';
-            }
-
-            output += spaces + stars + '\n';
-        }
-        document.getElementById('output').textContent = output;
-
-        let output3 = '';
-        for (let col = 1; col <= 10; col++) {
-            let spaces = '';
-            for (let space = 1; space <= 10 
-            + col; space++) {
-                spaces += ' ';
-            }
-
-            let stars = '';
-            for (let row = 1; row <= col; row++) {
-                stars += '* ';
-            }
-
-            output3 += spaces + stars + '\n';
-        }
-        document.getElementById('output3').textContent = output3;
-       
-
-
-        
-        let output1 = '';
-        for (let col = 1; col <= 10; col++) {
-            let spaces = '';
-            for (let space = 1; space <= 10 - col; space++) {
-                spaces += ' ';
-            }
-
-            let star = '*';
-
-            output1 += spaces + star + '\n';
-        }
-
-        document.getElementById('output1').textContent = output1;
-
-
-        let output2 = '';
-        for (let col = 1; col <= 10; col++) {
-            let spaces = '';
-            for (let space = 1; space <= 10 + col; space++) {
-                spaces += ' ';
-            }
-
-            let star = '*';
-
-            output2 += spaces + star + '\n';
-        }
-
-        document.getElementById('output2').textContent = output2;
-
-    </script>
+    <h1>JavaScript Functions</h1>
+    <p>Call a function to compute the product of p1 and p2 and return the result:</p>
+    <p id="demo"></p>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+}
+
+.checkopacity{
+    height: 500px;
+    width: 500px;
+    background-color: aqua;
+    border-radius: 50%;
+    transition: all;
+}
