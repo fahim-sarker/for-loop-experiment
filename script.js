@@ -39,3 +39,13 @@ switch(new Date().getDay()){
    break;
 }
 
+let number = 10;
+
+typeof(number)
+
+
+
+function myFunction(x, y = 10) {
+  return x + y;
+}
+myFunction(5);
