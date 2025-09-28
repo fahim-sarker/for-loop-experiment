@@ -67,3 +67,38 @@ for (let i = 1; i <= row; i++) {
    let h = "_".repeat(i * 2 - 1);   
    console.log(gap + h + gap);
 }
+
+
+let c = 10;
+let a = 3;
+let b = 9;
+ 
+function timesTen(x,y,z) {
+    return x+y+z;
+}
+ 
+let d = timesTen(c,b,a);
+ 
+console.log(d);
+
+
+
+
+
+
+// কেন এটা referenceError দেখাচ্ছে
+   
+
+function timesTen(a) {
+    x = 10;
+    return a * 10;
+}
+ 
+let y = timesTen(x);
+console.log(y);
+
+
+const arr = [3,5,6,7,1,2]
+console.log(arr.sort());
+console.log(arr.reverse());
+
