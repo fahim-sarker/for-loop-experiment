@@ -111,8 +111,8 @@ const btn = document.getElementById("newwindow")
 
 btn.addEventListener("click", () => {
    const newWin = window.open(
-      "",                   // খালি পেজ
-    "MyNewWindow",        // উইন্ডোর নাম
+      "",                   
+    "MyNewWindow", 
     "width=500,height=400,left=200,top=200"
    );
 
@@ -135,8 +135,8 @@ console.log(document.body.innerHTML);
 
 // 500px পর্যন্ত scroll করা
 window.scrollTo({
-  top: 500,       // vertical scroll position
-  left: 0,        // horizontal scroll (optional)
-  behavior: "smooth" // smooth scrolling, না চাইলে "auto" ব্যবহার করা যায়
+  top: 500, 
+  left: 0, 
+  behavior: "smooth" 
 });
 
