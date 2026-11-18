@@ -6,12 +6,15 @@
 body{
     margin: 0 auto;
     padding: 50px;
+    font-family: system-ui, sans-serif;
 }
-
-.checkopacity{
-    height: 500px;
-    width: 500px;
-    background-color: aqua;
-    border-radius: 50%;
-    transition: all;
+#output{
+    margin-top: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+.log-line{
+    margin: 6px 0;
+    font-family: ui-monospace, monospace;
 }

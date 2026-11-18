@@ -1,142 +1,67 @@
-const text = document.getElementById("demo");
-const text1 = document.getElementById("demo1");
-text.innerHTML="";
+// For loop experiments
 
-const isBayazidbroisgoodteacher = 700;
-const iswearegoodstudent = 400;
-const iswearenotgoodstudent = 500;
+const output = document.querySelector("#output");
 
-// if (isBayazidbroisgoodteacher > iswearegoodstudent) {
-//    text.innerHTML = ("Bayazid bro is really good mentor");
-// } else if (isBayazidbroisgoodteacher > iswearenotgoodstudent) {
-//    text.innerHTML = ("we really like our mentor");
-// }
-// else {
-//    text.innerHTML = ("No one is good!");
-// }
-
-
-switch (new Date().getDay()) {
-   case 0:
-      text1.innerHTML = "Today Is sunday"
-      break;
-   case 1:
-      text1.innerHTML = "Today Is Monday"
-      break;
-   case 2:
-      text1.innerHTML = "Today Is Tuesday"
-      break;
-   case 3:
-      text1.innerHTML = "Today Is Wednesday"
-      break;
-   case 4:
-      text1.innerHTML = "Today Is Thursday"
-      break;
-   case 5:
-      text1.innerHTML = "Today Is Friday"
-      break;
-   case 6:
-      text1.innerHTML = "Today Is Saturday"
-      break;
+function log(label, value) {
+  console.log(label, value);
+  const line = document.createElement("p");
+  line.className = "log-line";
+  line.textContent = `${label}: ${value}`;
+  output.appendChild(line);
 }
 
-let number = 10;
-
-typeof (number)
-
-
-
-function myFunction(x, y = 10) {
-   return x + y;
+// 1. Basic counting loop
+const counts = [];
+for (let i = 1; i <= 5; i++) {
+  counts.push(i);
 }
-myFunction(5);
+log("Basic count 1..5", counts.join(", "));
 
-const star = 20;
-
-for (let i = 1; i <= star; i++) {
-   let spaces = " ".repeat(star - i);
-   let row = "*".repeat(i * 2 - 1);
-   text.innerHTML += spaces + row + spaces + "<br>";
+// 2. Sum of numbers 1..10
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+  sum += i;
 }
+log("Sum 1..10", sum);
 
-
-const row = 10;
-
-for (let i = 1; i <= row; i++) {
-   let gap = " ".repeat(row - i);   
-   let h = "_".repeat(i * 2 - 1);   
-   console.log(gap + h + gap);
+// 3. Loop over an array
+const fruits = ["apple", "banana", "cherry"];
+const labelled = [];
+for (let i = 0; i < fruits.length; i++) {
+  labelled.push(`${i}: ${fruits[i]}`);
 }
+log("Fruits with index", labelled.join(" | "));
 
-
-let c = 10;
-let a = 3;
-let b = 9;
- 
-function timesTen(x,y,z) {
-    return x+y+z;
+// 4. Only even numbers (continue) and stop at 8 (break)
+const evens = [];
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 !== 0) continue;
+  if (i > 8) break;
+  evens.push(i);
 }
- 
-let d = timesTen(c,b,a);
- 
-console.log(d);
+log("Even numbers, stop after 8", evens.join(", "));
 
-
-
-
-
-
-// কেন এটা referenceError দেখাচ্ছে
-   
-
-function timesTen(a) {
-    x = 10;
-    return a * 10;
+// 5. Nested loop: multiplication table 3x3
+const table = [];
+for (let row = 1; row <= 3; row++) {
+  const cells = [];
+  for (let col = 1; col <= 3; col++) {
+    cells.push(row * col);
+  }
+  table.push(cells.join(" "));
 }
- 
-let y = timesTen(x);
-console.log(y);
+log("3x3 multiplication table", table.join(" / "));
 
+// 6. Countdown loop (counting backwards)
+const countdown = [];
+for (let i = 5; i >= 1; i--) {
+  countdown.push(i);
+}
+log("Countdown", countdown.join(", ") + ", liftoff!");
 
-const arr = [3,5,6,7,1,2]
-console.log(arr.sort());
-console.log(arr.reverse());
-
-
-console.log(window.innerWidth);
-console.log(window.outerHeight);
-console.log(window.location);
-const btn = document.getElementById("newwindow")
-
-
-btn.addEventListener("click", () => {
-   const newWin = window.open(
-      "",                   
-    "MyNewWindow", 
-    "width=500,height=400,left=200,top=200"
-   );
-
-   newWin.document.title = "My New Window";
-  newWin.document.body.innerHTML = `
-    <div style="font-family: system-ui; padding: 20px;">
-      <h2>Hello!</h2>
-      <p>This is a new window opened from external JS.</p>
-      <p>Current size: ${newWin.outerWidth} x ${newWin.outerHeight}</p>
-      <button id="resizeBtn">Resize to 800x600</button>
-    </div>
-  `;
-   
-})
-
-
-console.log(document.body.innerHTML);
-
-
-
-// 500px পর্যন্ত scroll করা
-window.scrollTo({
-  top: 500, 
-  left: 0, 
-  behavior: "smooth" 
-});
-
+// 7. Same array, for...of variant for comparison
+const upper = [];
+for (const fruit of fruits) {
+  upper.push(fruit.toUpperCase());
+}
+log("fruits via for...of, uppercased", upper.join(", "));
