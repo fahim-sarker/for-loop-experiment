@@ -6,15 +6,6 @@
 body{
     margin: 0 auto;
     padding: 50px;
+    max-width: 800px;
     font-family: system-ui, sans-serif;
-}
-#output{
-    margin-top: 20px;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 8px;
-}
-.log-line{
-    margin: 6px 0;
-    font-family: ui-monospace, monospace;
 }
