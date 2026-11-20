@@ -1,6 +1,12 @@
-function tocelsipous(farenhit) {
-  return (10 / 9) * (farenhit - 30);
+function calculateCartTotal(cartItems) {
+  return cartItems.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
 }
-let heading = tocelsipous(70);
-let text = "the temparatue is " + heading + " celcious";
-console.log(text);
+
+const cart = [
+  { name: "Keyboard", price: 1500, quantity: 2 },
+  { name: "Mouse", price: 800, quantity: 1 },
+];
+
+console.log(calculateCartTotal(cart));
